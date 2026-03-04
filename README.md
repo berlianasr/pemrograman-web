@@ -1,49 +1,32 @@
-# Web CV - Berliana Sarlita Rahajeng
+# Pemrograman Web - Dokumentasi Tugas
 
-A personal portfolio website and Curriculum Vitae built with modern web standards, featuring a professional and interactive user experience.
+Website ini dirancang untuk mendokumentasikan seluruh perjalanan belajar saya di mata kuliah **Pemrograman Web** selama satu semester (Semester 4). Proyek ini mencakup implementasi berbagai standar web modern, mulai dari struktur dasar HTML hingga berbagai materi.
 
-## ✨ Features
+## 🔗 Akses Link
+Web ini bisa diakses secara langsung melalui:
+👉 **[https://berlianasr.github.io/pemrograman-web/](https://berlianasr.github.io/pemrograman-web/)**
 
-- **Interactive Navigation**: A sticky header navigation bar that allows for quick jumping between CV sections.
-- **Micro-Animations**: Elegant "Reveal on Scroll" effects that fade and slide sections into view.
-- **Responsive Design**: Fully optimized for various screen sizes, from mobile phones to high-resolution desktops.
-- **Project Showcase**: A dedicated section for previous projects with direct links to their respective GitHub repositories.
-- **Premium Aesthetics**: A custom-designed maroon and cream color palette with modern typography using Google Fonts (Inter & Playfair Display).
 
 ## 🛠️ Tech Stack
+- **HTML5**: Struktur semantik untuk aksesibilitas dan SEO yang lebih baik.
+- **Vanilla CSS3**: Kustomisasi gaya menggunakan variabel CSS, Flexbox, Grid, dan animasi keyframe.
 
-- **HTML5**: Semantic structure for better accessibility and SEO.
-- **Vanilla CSS3**: Custom styles incorporating CSS variables, Flexbox, Grid, and keyframe animations.
+## 📋 Daftar Tugas
+- **Week 1: Curriculum Vitae**: Pembuatan halaman CV profesional dengan HTML & CSS.
+- **Week 2: Tabel Nilai**: Implementasi tabel kompleks menggunakan rowspan dan colspan.
+- **Week 2: Halaman Login**: Pembuatan interface login modern.
 
-## 📂 Project Structure
-
+## 📂 Struktur Proyek
 ```text
-web-cv/
-├── index.html        # Landing page with portfolio entry point
-├── cv.html           # Detailed interactive Curriculum Vitae
+pemrograman-web/
+├── index.html        # Landing page (Daftar Tugas & Dokumentasi)
+├── cv.html           # Curriculum Vitae interaktif
+├── table.html        # Tugas Implementasi Tabel Nilai
+├── login.html        # Tugas Implementasi Halaman Login
 ├── css/
-│   └── style.css     # Global styles and layout components
-├── assets/
-│   ├── profpic.JPG   # Profile picture
-│   └── ...           # Other media assets
-└── README.md         # Project documentation
+│   └── style.css     # Global styles dan komponen layout
+├── assets/           # Media, gambar, dan aset visual lainnya
+└── README.md         # Dokumentasi proyek
 ```
-
-## 🚀 Getting Started
-
-To view the project locally:
-
-1. Clone the repository or download the source code.
-2. Open `index.html` in any modern web browser (Chrome, Firefox, Safari, Edge).
-3. Click "View Curriculum Vitae" to explore the detailed CV.
-
-## 📁 Sections included
-
-- **Education**: Academic history and achievements.
-- **Work & Internship Experience**: Professional roles and responsibilities.
-- **Previous Projects**: Linked to live repositories for code review.
-- **Achievement & Organization**: Competition wins and volunteer work.
-- **Technical & Managerial Skills**: Core competencies and tools.
-- **Dream Job**: Short-term and long-term career aspirations.
-
 ---
+
