@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Diskusi - WebDev Course</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="logo">WebDev<span>Course</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Course</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="forum.html" class="active">Forum</a></li>
+                <li><a href="../login.html" class="btn btn-primary btn-sm" style="color: white;">Login / Register</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 3rem 5%; max-width: 1000px;">
+        <div class="forum-header">
+            <div>
+                <h1>Forum Diskusi Tanya Jawab</h1>
+                <p style="color: var(--text-muted);">Tempat berdiskusi antar siswa dan instruktur</p>
+            </div>
+            <a href="#buat-pertanyaan" class="btn btn-primary">+ Buat Topik Baru</a>
+        </div>
+
+        <div class="card" style="padding: 0; margin-bottom: 3rem; overflow: hidden;">
+            <div class="forum-post">
+                <div class="post-stats">
+                    <div class="votes" style="color: var(--success);">+14</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">Votes</div>
+                </div>
+                <div class="post-content" style="flex-grow: 1;">
+                    <span class="badge badge-warning" style="margin-bottom: 0.5rem; display: inline-block;">JavaScript</span>
+                    <h4><a href="#">Kenapa `document.getElementById` mengembalikan null?</a></h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Saya mencoba mengambil value dari input menggunakan JS, tapi hasilnya null. Script-nya ada di tag &lt;head&gt; apakah itu berpengaruh?</p>
+                    <div class="post-meta">
+                        Ditanyakan oleh <strong>Budi Santoso</strong> &bull; 2 Jam yang lalu &bull; <strong>3 Komentar</strong> (Notifikasi Aktif)
+                    </div>
+                </div>
+            </div>
+
+            <div class="forum-post">
+                <div class="post-stats">
+                    <div class="votes">+5</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">Votes</div>
+                </div>
+                <div class="post-content" style="flex-grow: 1;">
+                    <span class="badge badge-success" style="margin-bottom: 0.5rem; display: inline-block;">CSS</span>
+                    <h4><a href="#">Cara mengatasi elemen yang keluar dari container (overflow) saat pakai flexbox?</a></h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Ketika saya menggunakan flexbox di layar HP, beberapa gambar menjadi terlalu besar dan merusak layout. Solusinya bagaimana ya?</p>
+                    <div class="post-meta">
+                        Ditanyakan oleh <strong>Dimas Aditya</strong> &bull; 5 Jam yang lalu &bull; <strong>1 Komentar instruktur</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forum-post">
+                <div class="post-stats">
+                    <div class="votes" style="color: var(--text-muted);">0</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">Votes</div>
+                </div>
+                <div class="post-content" style="flex-grow: 1;">
+                    <span class="badge badge-warning" style="background:var(--primary-light); color:var(--primary); margin-bottom: 0.5rem; display: inline-block;">PHP Backend</span>
+                    <h4><a href="#">Error koneksi MySQL: Access denied for user 'root'@'localhost'</a></h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Halo, saya menggunakan XAMPP. Saat mencoba connect lewat mysqli_connect terjadi error access denied padahal tidak pakai password.</p>
+                    <div class="post-meta">
+                        Ditanyakan oleh <strong>Sarah Amalia</strong> &bull; Kemarin &bull; <strong>Belum ada jawaban</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form untuk buat pertanyaan -->
+        <div class="card" id="buat-pertanyaan">
+            <h3 style="margin-bottom: 1.5rem;">Tanyakan Sesuatu</h3>
+            <form action="#">
+                <div class="form-group">
+                    <label for="judul">Judul Pertanyaan</label>
+                    <input type="text" id="judul" class="form-control" placeholder="Contoh: Mengapa gambar saya tidak muncul di HTML?">
+                </div>
+                <div class="form-group">
+                    <label for="kategori">Kategori Materi</label>
+                    <select id="kategori" class="form-control">
+                        <option value="html">HTML Dasar</option>
+                        <option value="css">CSS (Styling)</option>
+                        <option value="js">JavaScript</option>
+                        <option value="php">PHP & MySQL</option>
+                        <option value="umum">Umum (Error Server, dll)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="detail">Detail Masalah / Pertanyaan (Cantumkan Kode jika ada)</label>
+                    <textarea id="detail" class="form-control" rows="6" placeholder="Jelaskan pertanyaan / kendala Anda se-detail mungkin..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Posting Pertanyaan</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

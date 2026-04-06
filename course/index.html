@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev Course - Belajar Pemrograman Web dari Nol</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="logo">WebDev<span>Course</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="course.html">Course</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="../login.html" class="btn btn-primary btn-sm" style="color: white;">Login / Register</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Bangun Karir Impianmu di <span>Web Development</span></h1>
+                <p>Platform pembelajaran interaktif untuk pemula hingga profesional. Kuasai HTML, CSS, JavaScript, dan PHP bersama instruktur ahli.</p>
+                
+                <div style="margin-top: 2rem;">
+                    <a href="course.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Mulai Belajar Sekarang</a>
+                    <a href="#curriculum" class="btn btn-outline" style="font-size: 1.1rem; padding: 1rem 2rem; margin-left: 1rem;">Lihat Kurikulum</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h4>50+</h4>
+                        <p>Video Modul</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>10k+</h4>
+                        <p>Siswa Aktif</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>4.9/5</h4>
+                        <p>Rating Course</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Topics Section -->
+        <section id="curriculum" class="container">
+            <div class="section-title">
+                <h2>Kurikulum Pembelajaran</h2>
+                <p style="color: var(--text-muted);">Materi terstruktur dari dasar hingga tingkat lanjut</p>
+            </div>
+            
+            <div class="grid grid-cols-4">
+                <div class="card topic-card">
+                    <div class="topic-icon">H</div>
+                    <h3>HTML5 Dasar</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Pelajari struktur dasar web, heading, paragraf, form, dan tabel.</p>
+                    <a href="course.html" style="color: var(--primary); font-weight: 600;">Lihat Modul &rarr;</a>
+                </div>
+                
+                <div class="card topic-card">
+                    <div class="topic-icon" style="background:#e0efff; color:#0ea5e9;">C</div>
+                    <h3>Styling CSS3</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Desain web responsif dengan Flexbox, Grid, dan animasi modern.</p>
+                    <a href="course.html" style="color: var(--primary); font-weight: 600;">Lihat Modul &rarr;</a>
+                </div>
+
+                <div class="card topic-card">
+                    <div class="topic-icon" style="background:#fff7ed; color:#f59e0b;">JS</div>
+                    <h3>JavaScript</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Interaktivitas web, manipulasi DOM, function, dan event handling.</p>
+                    <a href="course.html" style="color: var(--primary); font-weight: 600;">Lihat Modul &rarr;</a>
+                </div>
+
+                <div class="card topic-card">
+                    <div class="topic-icon" style="background:#f3f4f6; color:#4f46e5;">P</div>
+                    <h3>Backend PHP</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Syntax dasar, database MySQL, form handling, dan CRUD.</p>
+                    <a href="course.html" style="color: var(--primary); font-weight: 600;">Lihat Modul &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container grid grid-cols-3">
+            <div>
+                <h3 style="color: var(--primary);">WebDevCourse</h3>
+                <p>Belajar web dari ahlinya. Cocok untuk semua tingkatan dari pemula hingga mahir.</p>
+            </div>
+            <div>
+                <h3>Tautan Cepat</h3>
+                <ul style="color: var(--text-muted); line-height: 2;">
+                    <li><a href="course.html">Semua Course</a></li>
+                    <li><a href="dashboard.html">Dashboard Saya</a></li>
+                    <li><a href="forum.html">Forum Diskusi</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Kontak</h3>
+                <ul style="color: var(--text-muted); line-height: 2;">
+                    <li>Email: support@webdevcourse.com</li>
+                    <li>Telp: 0812-3456-7890</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 WebDev Course. Hak Cipta Dilindungi.
+        </div>
+    </footer>
+</body>
+</html>

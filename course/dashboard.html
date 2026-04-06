@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Pengguna - WebDev Course</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="logo">WebDev<span>Course</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Course</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="../login.html" class="btn btn-primary btn-sm" style="color: white;">Login / Register</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="dashboard-grid">
+        <!-- Sidebar Dashboard -->
+        <aside class="card" style="align-self: start; padding: 1.5rem;">
+            <div class="user-profile">
+                <div class="avatar">DA</div>
+                <h3 style="margin-bottom: 0.25rem;">Dimas Aditya</h3>
+                <p style="color: var(--text-muted); font-size: 0.875rem;">Siswa Pemula</p>
+                <div style="margin-top: 1rem;">
+                    <a href="admin.html" style="font-size: 0.75rem; color: var(--primary);">Beralih ke Admin Panel</a>
+                </div>
+            </div>
+            <nav class="dash-menu">
+                <a href="#" class="active">Pencapaian Belajar</a>
+                <a href="#">Riwayat Kursus</a>
+                <a href="#">Sertifikat Saya</a>
+                <a href="#">Pengaturan Akun</a>
+            </nav>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <div>
+            <div class="grid grid-cols-3" style="margin-bottom: 2rem;">
+                <div class="card">
+                    <h4 style="color: var(--text-muted);">Total Belajar</h4>
+                    <h2 style="color: var(--primary); font-size: 2.5rem;">14 <span style="font-size: 1rem; color: var(--text-muted);">Jam</span></h2>
+                </div>
+                <div class="card">
+                    <h4 style="color: var(--text-muted);">Modul Selesai</h4>
+                    <h2 style="color: var(--success); font-size: 2.5rem;">5<span style="font-size: 1rem; color: var(--text-muted);">/16</span></h2>
+                </div>
+                <div class="card">
+                    <h4 style="color: var(--text-muted);">Rata-rata Quiz</h4>
+                    <h2 style="color: var(--warning); font-size: 2.5rem;">85</h2>
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 1.5rem;">Progress Belajar Berdasarkan Topik</h3>
+                
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <span>HTML5 Dasar</span>
+                        <span>100% Selesai</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%; background: var(--success);"></div>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <span>CSS (Styling)</span>
+                        <span>40% Selesai</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 40%;"></div>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <span>JavaScript Dasar</span>
+                        <span>0% Belum dimulai</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <span>PHP & Database</span>
+                        <span>0% Belum dimulai</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 style="margin-bottom: 1.5rem;">Sertifikat Saya</h3>
+                <div style="border: 2px dashed var(--border); padding: 3rem; text-align: center; border-radius: 12px; background: var(--bg-color);">
+                    <div style="font-size: 3rem; color: var(--text-muted); margin-bottom: 1rem;">🎓</div>
+                    <h4>Belum ada sertifikat</h4>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Selesaikan seluruh 16 modul untuk mendapatkan sertifikat kelulusan.</p>
+                    <a href="course.html" class="btn btn-primary">Lanjutkan Belajar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
