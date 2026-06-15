@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi & Kode Pos - Dashboard Pemrograman Web</title>
+    <!-- Font Awesome for sleek modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Dashboard Header -->
+        <header>
+            <div class="logo-section">
+                <h1><i class="fa-solid fa-layer-group"></i> WebApp Suite</h1>
+                <p>Registrasi & Kode Pos Indonesia</p>
+            </div>
+            <div class="header-controls">
+                <a href="../index.html" class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Portfolio
+                </a>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="tabs-navigation">
+            <button class="tab-btn active" data-tab="tab-registrasi">
+                <i class="fa-solid fa-user-pen"></i> Form Registrasi
+            </button>
+            <button class="tab-btn" data-tab="tab-kodepos">
+                <i class="fa-solid fa-map-pin"></i> Cari Kode Pos
+            </button>
+        </nav>
+
+        <!-- TAB 1: FORM REGISTRASI -->
+        <main id="tab-registrasi" class="tab-content active">
+            <div class="dashboard-grid">
+                <!-- Left: Form Card -->
+                <div class="card">
+                    <h2 class="card-title"><i class="fa-solid fa-user-plus"></i> Registrasi Mahasiswa</h2>
+                    <p class="card-subtitle">Formulir pendaftaran mahasiswa baru beserta pencocokan dosen pengampu.</p>
+
+                    <form id="registration-form" novalidate>
+                        <!-- Nama Mahasiswa (dengan autocomplete) -->
+                        <div class="form-group">
+                            <label for="mhs-name" class="form-label">Nama Mahasiswa</label>
+                            <div class="input-wrapper">
+                                <input type="text" id="mhs-name" class="form-input"
+                                    placeholder="Masukkan nama (Contoh: Ahmad, Budi...)" autocomplete="off">
+                                <i class="fa-solid fa-user input-icon"></i>
+                            </div>
+                            <div id="mhs-autocomplete" class="autocomplete-box"></div>
+                            <div id="name-error" class="form-error"><i class="fa-solid fa-circle-exclamation"></i> Nama
+                                tidak boleh kosong</div>
+                        </div>
+
+                        <!-- NIM (Validasi Angka) -->
+                        <div class="form-group">
+                            <label for="mhs-nim" class="form-label">NIM (Nomor Induk Mahasiswa)</label>
+                            <div class="input-wrapper">
+                                <input type="text" id="mhs-nim" class="form-input"
+                                    placeholder="Masukkan NIM (9-12 digit angka)" maxlength="12">
+                                <i class="fa-solid fa-id-card input-icon"></i>
+                            </div>
+                            <div id="nim-error" class="form-error"><i class="fa-solid fa-circle-exclamation"></i> NIM
+                                harus berukuran 9-12 digit angka</div>
+                        </div>
+
+                        <!-- Mata Kuliah (List Dropdown Dinamis) -->
+                        <div class="form-group">
+                            <label for="mhs-course" class="form-label">Mata Kuliah</label>
+                            <div class="select-wrapper">
+                                <select id="mhs-course" class="form-input">
+                                    <option value="" disabled selected>-- Pilih Mata Kuliah --</option>
+                                </select>
+                                <i class="fa-solid fa-book input-icon"></i>
+                            </div>
+                            <div id="course-error" class="form-error"><i class="fa-solid fa-circle-exclamation"></i>
+                                Silakan pilih mata kuliah</div>
+                        </div>
+
+                        <!-- Dosen Pengampu (List Dropdown Terikat/Dinamis) -->
+                        <div class="form-group">
+                            <label for="mhs-lecturer" class="form-label">Dosen Pengampu</label>
+                            <div class="select-wrapper">
+                                <select id="mhs-lecturer" class="form-input" disabled>
+                                    <option value="" disabled selected>-- Pilih Dosen Pengampu --</option>
+                                </select>
+                                <i class="fa-solid fa-chalkboard-user input-icon"></i>
+                            </div>
+                            <div id="lecturer-error" class="form-error"><i class="fa-solid fa-circle-exclamation"></i>
+                                Silakan pilih dosen pengampu</div>
+                        </div>
+
+                        <button type="submit" class="btn-primary">
+                            <i class="fa-solid fa-paper-plane"></i> Daftar Sekarang
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right: Information & Table Card -->
+                <div class="info-panel">
+                    <div class="info-box">
+                        <h3><i class="fa-solid fa-circle-info"></i> Petunjuk Form</h3>
+                        <p>Ketikkan huruf awal atau bagian nama (seperti "Ah", "Bu", "Cit") pada input <strong>Nama
+                                Mahasiswa</strong> untuk menampilkan daftar nama yang direkomendasikan sistem secara
+                            otomatis.</p>
+                        <p style="margin-top: 0.5rem;">Pilihlah salah satu <strong>Mata Kuliah</strong> untuk
+                            mengaktifkan dropdown <strong>Dosen Pengampu</strong> secara dinamis berdasarkan mata kuliah
+                            tersebut.</p>
+                    </div>
+
+                    <!-- Registered Student List -->
+                    <div class="card registered-list">
+                        <h3 class="card-title" style="margin-bottom: 0.5rem;"><i class="fa-solid fa-list-ol"></i> Daftar
+                            Mahasiswa Terdaftar</h3>
+                        <div class="data-table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        <th>NIM</th>
+                                        <th>Mata Kuliah</th>
+                                        <th>Dosen</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="reg-table-body">
+                                    <tr id="empty-state-row">
+                                        <td colspan="5" class="empty-state">Belum ada data mahasiswa terdaftar.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- TAB 2: PENCARIAN KODE POS -->
+        <main id="tab-kodepos" class="tab-content">
+            <div class="dashboard-grid">
+                <!-- Left: Query Selectors -->
+                <div class="card">
+                    <h2 class="card-title"><i class="fa-solid fa-magnifying-glass-location"></i> Pencarian Kode Pos</h2>
+                    <p class="card-subtitle">Pilih wilayah secara berurutan untuk mencari informasi kode pos daerah
+                        Indonesia.</p>
+
+                    <form id="postal-search-form">
+                        <!-- Provinsi -->
+                        <div class="form-group">
+                            <label for="postal-province" class="form-label">Provinsi</label>
+                            <div class="select-wrapper">
+                                <select id="postal-province" class="form-input">
+                                    <option value="" disabled selected>-- Pilih Provinsi --</option>
+                                </select>
+                                <i class="fa-solid fa-map input-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- Kabupaten / Kota -->
+                        <div class="form-group">
+                            <label for="postal-regency" class="form-label">Kabupaten / Kota</label>
+                            <div class="select-wrapper">
+                                <select id="postal-regency" class="form-input" disabled>
+                                    <option value="" disabled selected>-- Pilih Kabupaten/Kota --</option>
+                                </select>
+                                <i class="fa-solid fa-city input-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- Kecamatan -->
+                        <div class="form-group">
+                            <label for="postal-district" class="form-label">Kecamatan</label>
+                            <div class="select-wrapper">
+                                <select id="postal-district" class="form-input" disabled>
+                                    <option value="" disabled selected>-- Pilih Kecamatan --</option>
+                                </select>
+                                <i class="fa-solid fa-tree-city input-icon"></i>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary">
+                            <i class="fa-solid fa-search"></i> Cari Kode Pos
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right: Output Card -->
+                <div class="card">
+                    <h2 class="card-title"><i class="fa-solid fa-envelope-open-text"></i> Hasil Pencarian</h2>
+                    <div id="postal-result-box" class="postal-result-container">
+                        <div id="postal-empty-result">
+                            <i class="fa-solid fa-folder-open"
+                                style="font-size: 3rem; color: var(--text-muted); margin-bottom: 1rem; display: block;"></i>
+                            <span style="color: var(--text-secondary);">Silakan pilih daerah pencarian terlebih
+                                dahulu.</span>
+                        </div>
+
+                        <!-- Beautiful Output Postal Stamp -->
+                        <div id="postal-card" class="postal-card">
+                            <div class="postal-badge">Indonesia Mail</div>
+                            <div id="zip-code-display" class="postal-code-display">00000</div>
+                            <div style="font-weight: 700; color: var(--text-primary);">KODE POS RESMI</div>
+
+                            <div class="postal-details">
+                                <div class="postal-detail-item">
+                                    <div class="postal-detail-label">Provinsi</div>
+                                    <div id="res-province" class="postal-detail-value">-</div>
+                                </div>
+                                <div class="postal-detail-item">
+                                    <div class="postal-detail-label">Kabupaten / Kota</div>
+                                    <div id="res-regency" class="postal-detail-value">-</div>
+                                </div>
+                                <div class="postal-detail-item" style="grid-column: span 2;">
+                                    <div class="postal-detail-label">Kecamatan</div>
+                                    <div id="res-district" class="postal-detail-value">-</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 <strong>Berliana Sarlita Rahajeng</strong>. Mata Kuliah Pemrograman Web.</p>
+            <p style="font-size: 0.75rem; margin-top: 0.5rem; color: var(--text-muted);">
+                Desain responsif dibuat menggunakan Vanilla HTML, CSS, dan JavaScript Modern.
+            </p>
+        </footer>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - WebDev Course</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: var(--bg-color);">
+    <header style="background: var(--text-dark); color: white;">
+        <div class="container navbar">
+            <div class="logo" style="color: white;">WebDev<span>Admin</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html" style="color: #cbd5e1;">&larr; Kembali ke Web Utama</a></li>
+                <li><a href="#" style="color: white; font-weight: 700;">Admin Dashboard</a></li>
+                <li><a href="../login.html" class="btn btn-outline btn-sm" style="color: white; border-color: white;">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="dashboard-grid" style="margin-top: 2rem;">
+        <!-- Sidebar Admin -->
+        <aside class="card" style="align-self: start; padding: 1.5rem;">
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: var(--primary);">Menu Admin</h3>
+            </div>
+            <nav class="dash-menu">
+                <a href="#" class="active">Dashboard Utama</a>
+                <a href="#manajemen-user">Manajemen Pengguna</a>
+                <a href="#upload-materi">Upload Materi / Modul</a>
+                <a href="#laporan">Laporan & Statistik</a>
+            </nav>
+        </aside>
+
+        <!-- Admin Content -->
+        <div>
+            <div style="margin-bottom: 2rem;">
+                <h2>Ringkasan Statistik</h2>
+            </div>
+            <div class="grid grid-cols-3" style="margin-bottom: 3rem;">
+                <div class="card" style="border-left: 4px solid var(--primary);">
+                    <h4 style="color: var(--text-muted);">Total Pengguna</h4>
+                    <h2 style="font-size: 2.5rem;">1,245</h2>
+                </div>
+                <div class="card" style="border-left: 4px solid var(--success);">
+                    <h4 style="color: var(--text-muted);">Materi Terupload</h4>
+                    <h2 style="font-size: 2.5rem;">56</h2>
+                </div>
+                <div class="card" style="border-left: 4px solid var(--warning);">
+                    <h4 style="color: var(--text-muted);">Forum Menunggu Balasan</h4>
+                    <h2 style="font-size: 2.5rem;">12</h2>
+                </div>
+            </div>
+
+            <!-- Upload Materi Form -->
+            <div class="card" id="upload-materi" style="margin-bottom: 3rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <h3>Upload Materi Baru</h3>
+                    <button class="btn btn-primary btn-sm">+ Simpan Materi</button>
+                </div>
+                
+                <form action="#">
+                    <div class="grid grid-cols-2">
+                        <div class="form-group">
+                            <label>Judul Materi</label>
+                            <input type="text" class="form-control" placeholder="Contoh: CSS Flexbox">
+                        </div>
+                        <div class="form-group">
+                            <label>Pilih Kategori Bab</label>
+                            <select class="form-control">
+                                <option>HTML Dasar</option>
+                                <option>CSS (Styling)</option>
+                                <option>JavaScript Dasar</option>
+                                <option>PHP Backend</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Deskripsi / Catatan Text</label>
+                        <textarea class="form-control" rows="4" placeholder="Tulis catatan pendukung materi di sini..."></textarea>
+                    </div>
+                    <div class="grid grid-cols-2">
+                        <div class="form-group">
+                            <label>File Video Tutorial (.mp4)</label>
+                            <input type="file" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>File Slide / Tambahan (.pdf, .zip)</label>
+                            <input type="file" class="form-control">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Manajemen Pengguna Table -->
+            <div class="card" id="manajemen-user">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <h3>Manajemen Pengguna (Siswa/Instruktur)</h3>
+                    <input type="text" class="form-control" placeholder="Cari user..." style="width: 250px;">
+                </div>
+                
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nama Lengkap</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Progress Modul</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Budi Santoso</td>
+                                <td>budi@member.com</td>
+                                <td><span class="badge badge-warning">Siswa</span></td>
+                                <td>
+                                    <div class="progress-bar" style="height: 6px; margin-top: 5px;">
+                                        <div class="progress-fill" style="width: 45%;"></div>
+                                    </div>
+                                    <span style="font-size: 0.75rem; color: var(--text-muted);">45% Selesai</span>
+                                </td>
+                                <td>
+                                    <a href="#" style="color: var(--primary); margin-right: 0.5rem; font-size: 0.875rem;">Edit</a>
+                                    <a href="#" style="color: var(--danger); font-size: 0.875rem;">Hapus</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dimas Aditya</td>
+                                <td>dimas@member.com</td>
+                                <td><span class="badge badge-warning">Siswa</span></td>
+                                <td>
+                                    <div class="progress-bar" style="height: 6px; margin-top: 5px;">
+                                        <div class="progress-fill" style="width: 80%;"></div>
+                                    </div>
+                                    <span style="font-size: 0.75rem; color: var(--text-muted);">80% Selesai</span>
+                                </td>
+                                <td>
+                                    <a href="#" style="color: var(--primary); margin-right: 0.5rem; font-size: 0.875rem;">Edit</a>
+                                    <a href="#" style="color: var(--danger); font-size: 0.875rem;">Hapus</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dr. Instruktur Web</td>
+                                <td>instruktur@webdev.com</td>
+                                <td><span class="badge badge-success">Instruktur</span></td>
+                                <td>
+                                    <span style="font-size: 0.75rem; color: var(--text-muted);">- N/A -</span>
+                                </td>
+                                <td>
+                                    <a href="#" style="color: var(--primary); margin-right: 0.5rem; font-size: 0.875rem;">Edit</a>
+                                    <a href="#" style="color: var(--danger); font-size: 0.875rem;">Hapus</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <button class="btn btn-outline btn-sm">Muat Lebih Banyak...</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

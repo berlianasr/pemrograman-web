@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Area - WebDev Course</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="logo">WebDev<span>Course</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html" class="active">Course</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="../login.html" class="btn btn-primary btn-sm" style="color: white;">Login / Register</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="course-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="course-sidebar accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>1. HTML Dasar</span>
+                    <span>▼</span>
+                </div>
+                <div class="accordion-body">
+                    <a href="#html-1" class="active">1.1 Struktur Dokumen</a>
+                    <a href="#html-2">1.2 Heading & Paragraf</a>
+                    <a href="#html-3">1.3 Link & Gambar</a>
+                    <a href="#html-4">1.4 Tabel & Form</a>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>2. CSS (Styling)</span>
+                    <span>▼</span>
+                </div>
+                <div class="accordion-body">
+                    <a href="#css-1">2.1 Selector Dasar</a>
+                    <a href="#css-2">2.2 Box Model & Layout</a>
+                    <a href="#css-3">2.3 Flexbox</a>
+                    <a href="#css-4">2.4 CSS Grid Framework</a>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>3. JavaScript Dasar</span>
+                    <span>▼</span>
+                </div>
+                <!-- Normally hidden, simulated with CSS or just visible -->
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>4. PHP & MySQL</span>
+                    <span>▼</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="course-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h1>1.1 Struktur Dokumen HTML</h1>
+                <a href="quiz.html" class="btn btn-outline btn-sm">Kerjakan Quiz Bab Ini</a>
+            </div>
+
+            <!-- Fake Video Player -->
+            <div class="video-container">
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem; cursor: pointer;">▶️</div>
+                    <p>Materi Video: Pengenalan HTML (10:24)</p>
+                </div>
+            </div>
+
+            <div class="content-text">
+                <h2>Pendahuluan</h2>
+                <p>HTML (HyperText Markup Language) adalah kerangka dasar untuk membuat sebuah website. Setiap dokumen web dimulai dengan deklarasi doctype, elemen <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, dan <code>&lt;body&gt;</code>.</p>
+                
+                <h3 style="margin-top: 2rem;">Contoh Kode (Code Snippet)</h3>
+                <p>Berikut adalah contoh kerangka minimum dari sebuah dokumen HTML5 yang valid:</p>
+                
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Webpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;p&gt;Ini adalah paragraf pertama saya.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                
+                <div class="card" style="background-color: var(--bg-color); border: none; margin-top: 2rem;">
+                    <h3>Latihan Mandiri</h3>
+                    <p>Cobalah buat satu file <code>index.html</code> di komputer kalian dan tulis kode di atas. Buka dengan browser untuk melihat hasilnya!</p>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+                <a href="#" class="btn btn-outline" style="opacity: 0.5; pointer-events: none;">&larr; Sebelumnya</a>
+                <a href="#html-2" class="btn btn-primary">Selanjutnya: Heading &amp; Paragraf &rarr;</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

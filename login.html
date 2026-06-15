@@ -1,123 +1,46 @@
 <!DOCTYPE html>
-<html lang="id">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login - Documentation</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .login-container {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .login-container h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 24px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #666;
-            font-size: 14px;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
-
-        .form-group input:focus {
-            border-color: #0056b3;
-            outline: none;
-            box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
-        }
-
-        /* Tombol Login */
-        .btn-login {
-            width: 100%;
-            padding: 12px;
-            background-color: #0056b3;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin-top: 10px;
-        }
-
-        .btn-login:hover {
-            background-color: #004494;
-        }
-
-
-        .footer-links {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-        }
-
-        .footer-links a {
-            color: #0056b3;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
+        .doc-container { max-width:800px; margin:0 auto; padding:40px 20px; }
+        .doc-header { text-align:center; margin-bottom:30px; }
+        .doc-image { width:100%; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1); margin-bottom:20px; }
+        .doc-section { margin-bottom:30px; }
+        .links-container { display:flex; flex-direction:column; gap:12px; margin-top:10px; }
+        .link-card { padding:12px; background:#f8f9fa; border-radius:8px; text-decoration:none; color:#333; border:1px solid #ddd; }
     </style>
 </head>
-
 <body>
+    <div class="doc-container">
+        <a href="index.html" class="back-btn">&larr; Back to Portfolio</a>
+        <div class="doc-header"><h1>Week 2: Halaman Login</h1></div>
+        <img src="assets/Login.png" alt="Login Preview" class="doc-image">
 
-    <div class="login-container">
-        <h2>Masuk</h2>
-        <form action="#">
-            <div class="form-group">
-                <label for="username">Username atau Email</label>
-                <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+        <div class="doc-section">
+            <h2>Deskripsi</h2>
+            <p>Halaman login sederhana yang mencakup form input username/email dan password serta tombol masuk.</p>
+        </div>
+
+        <div class="doc-section">
+            <h2>Fitur</h2>
+            <ul>
+                <li>Form input email/username</li>
+                <li>Input password dengan validasi sederhana</li>
+                <li>Tombol login</li>
+            </ul>
+        </div>
+
+        <div class="doc-section">
+            <h2>Tautan Terkait</h2>
+            <div class="links-container">
+                <a href="login_demo.html" class="link-card" target="_blank"><strong>View Demo:</strong> Halaman Login</a>
+                <a href="https://github.com/berlianasr/pemrograman-web/blob/main/login_demo.html" class="link-card" target="_blank"><strong>Source Code:</strong> GitHub</a>
             </div>
-
-            <div class="form-group">
-                <label for="password">Kata Sandi</label>
-                <input type="password" id="password" name="password" placeholder="Masukkan kata sandi" required>
-            </div>
-
-            <button type="submit" class="btn-login">Login</button>
-        </form>
-
-        <div class="footer-links">
-            <p><a href="#">Lupa kata sandi?</a></p>
-            <p>Belum punya akun? <a href="#">Daftar sekarang</a></p>
         </div>
     </div>
-
 </body>
-
 </html>

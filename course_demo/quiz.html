@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz & Evaluasi - WebDev Course</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="logo">WebDev<span>Course</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Course</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="../login.html" class="btn btn-primary btn-sm" style="color: white;">Login / Register</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 3rem 5%; max-width: 900px;">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h1>Evaluasi Modul 1: HTML Dasar</h1>
+            <p style="color: var(--text-muted);">Uji pemahamanmu setelah menyelesaikan Bab HTML Dasar.</p>
+        </div>
+
+        <form action="dashboard.html">
+            <!-- Pilihan Ganda -->
+            <div class="quiz-question card">
+                <h3 style="margin-bottom: 1rem;">Bagian 1: Pilihan Ganda</h3>
+                <p style="margin-bottom: 1rem; font-weight: 600;">1. Tag HTML apa yang digunakan untuk membuat judul utama (paling besar) di sebuah halaman?</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q1" value="head"> &lt;head&gt;</label>
+                    <label><input type="radio" name="q1" value="h6"> &lt;h6&gt;</label>
+                    <label><input type="radio" name="q1" value="h1"> &lt;h1&gt;</label>
+                    <label><input type="radio" name="q1" value="title"> &lt;title&gt;</label>
+                </div>
+            </div>
+
+            <div class="quiz-question card">
+                <p style="margin-bottom: 1rem; font-weight: 600;">2. Atribut apa yang digunakan di tag &lt;img&gt; untuk memberikan teks alternatif jika gambar gagal dimuat?</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q2" value="src"> src</label>
+                    <label><input type="radio" name="q2" value="alt"> alt</label>
+                    <label><input type="radio" name="q2" value="title"> title</label>
+                    <label><input type="radio" name="q2" value="link"> link</label>
+                </div>
+            </div>
+
+            <!-- Coding Exercise -->
+            <div class="quiz-question card">
+                <h3 style="margin-bottom: 1rem;">Bagian 2: Coding Exercise</h3>
+                <p style="margin-bottom: 1rem;">3. Buatlah struktur form sederhana menggunakan HTML yang memiliki: satu input teks untuk "Nama" dan satu tombol "Kirim". Tulis kodenya di dalam editor di bawah ini.</p>
+                
+                <div style="background: #1e1e1e; padding: 1rem; border-radius: 8px;">
+                    <div style="color: #64748b; font-size: 0.875rem; margin-bottom: 0.5rem; font-family: monospace;">// Tulis kode HTML Anda di sini (Simulasi IDE)</div>
+                    <textarea class="form-control" rows="8" style="background: transparent; color: #d4d4d4; font-family: monospace; border: none; resize: vertical;" placeholder="&lt;form&gt;...&lt;/form&gt;"></textarea>
+                </div>
+            </div>
+
+            <!-- Exam Project Upload (Mockup) -->
+            <div class="quiz-question card">
+                <h3 style="margin-bottom: 1rem;">Bagian 3: Final Project Submission</h3>
+                <p style="margin-bottom: 1rem; color: var(--text-muted); font-size: 0.95rem;">Upload file .zip yang berisi source code untuk website Profile/Portfolio yang sudah Anda selesaikan.</p>
+                
+                <div class="form-group" style="padding: 2rem; border: 2px dashed var(--primary); text-align: center; border-radius: 8px; background: var(--primary-light);">
+                    <div style="font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem;">📁</div>
+                    <label style="color: var(--primary); font-weight: 600; cursor: pointer;">
+                        Pilih File .ZIP
+                        <input type="file" style="display: none;">
+                    </label>
+                    <p style="font-size: 0.8rem; margin-top: 0.5rem;">Max Size: 10MB</p>
+                </div>
+            </div>
+
+            <div style="text-align: right; margin-top: 2rem;">
+                <button type="submit" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Kumpulkan Jawaban & Selesaikan Modul</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

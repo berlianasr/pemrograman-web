@@ -1,74 +1,46 @@
 <!DOCTYPE html>
-<html lang="id">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabel Nilai Siswa</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Table - Documentation</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-family: Arial, sans-serif;
-        }
-
-        th,
-        td {
-            border: 1px solid #333;
-            padding: 10px;
-            text-align: left;
-        }
-
-        /* Header Biru */
-        thead th {
-            background-color: #0056b3;
-            color: white;
-            text-align: center;
-        }
-
-        /* Baris Isi */
-        tbody tr td {
-            background-color: #ffffff;
-        }
+        .doc-container { max-width:800px; margin:0 auto; padding:40px 20px; }
+        .doc-header { text-align:center; margin-bottom:30px; }
+        .doc-image { width:100%; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1); margin-bottom:20px; }
+        .doc-section { margin-bottom:30px; }
+        .links-container { display:flex; flex-direction:column; gap:12px; margin-top:10px; }
+        .link-card { padding:12px; background:#f8f9fa; border-radius:8px; text-decoration:none; color:#333; border:1px solid #ddd; }
     </style>
 </head>
-
 <body>
+    <div class="doc-container">
+        <a href="index.html" class="back-btn">&larr; Back to Portfolio</a>
+        <div class="doc-header"><h1>Week 2: Tabel Nilai</h1></div>
+        <img src="assets/Table.png" alt="Tabel Nilai" class="doc-image">
 
-    <table>
-        <thead>
-            <tr>
-                <th rowspan="2">Nama</th>
-                <th colspan="3">Nilai</th>
-            </tr>
-            <tr>
-                <th>Kimia</th>
-                <th>Fisika</th>
-                <th>Biologi</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Robby</td>
-                <td>76</td>
-                <td>80</td>
-                <td>81</td>
-            </tr>
-            <tr>
-                <td>Rendi</td>
-                <td>84</td>
-                <td>70</td>
-                <td>75</td>
-            </tr>
-            <tr>
-                <td>Alfian</td>
-                <td>96</td>
-                <td>70</td>
-                <td>71</td>
-            </tr>
-        </tbody>
-    </table>
+        <div class="doc-section">
+            <h2>Deskripsi</h2>
+            <p>Implementasi tabel HTML untuk menampilkan data nilai siswa dengan header yang terstruktur dan penggunaan rowspan/colspan.</p>
+        </div>
 
+        <div class="doc-section">
+            <h2>Fitur</h2>
+            <ul>
+                <li>Penggunaan tabel HTML semantik</li>
+                <li>Header dan subtotal nilai</li>
+                <li>Styling sederhana untuk keterbacaan</li>
+            </ul>
+        </div>
+
+        <div class="doc-section">
+            <h2>Tautan Terkait</h2>
+            <div class="links-container">
+                <a href="table_demo.html" class="link-card" target="_blank"><strong>View Demo:</strong> Tabel Nilai</a>
+                <a href="https://github.com/berlianasr/pemrograman-web/blob/main/table_demo.html" class="link-card" target="_blank"><strong>Source Code:</strong> GitHub</a>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
