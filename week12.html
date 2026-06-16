@@ -7,10 +7,12 @@
     <title>Week 12: Struktur Database</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .doc-container { max-width:800px; margin:0 auto; padding:40px 20px; }
+        .doc-container { max-width:900px; margin:0 auto; padding:40px 20px; }
         .doc-header { text-align:center; margin-bottom:30px; }
         .doc-image { width:100%; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1); margin-bottom:20px; }
         .doc-section { margin-bottom:30px; }
+        .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:16px; }
+        .gallery img { width:100%; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
         .links-container { display:flex; flex-direction:column; gap:12px; margin-top:10px; }
         .link-card { padding:12px; background:#f8f9fa; border-radius:8px; text-decoration:none; color:#333; border:1px solid #ddd; }
     </style>
@@ -25,18 +27,27 @@
         <img src="assets/ERD%20MieMe.png" alt="ERD MieMe Preview" class="doc-image">
 
         <div class="doc-section">
-            <h2>Deskripsi</h2>
-            <p>Dokumentasi struktur database final project yang menampilkan relasi tabel, atribut penting, dan aturan integritas data.</p>
+            <p>Database pada aplikasi MieME menggunakan MySQL sebagai Database Management System (DBMS) dan dikelola melalui mekanisme migration berbasis PHP Native yang dikembangkan sendiri dengan konsep serupa Laravel Migration. Seluruh definisi struktur tabel ditulis dalam bentuk file PHP pada direktori <code>database/migrations</code>, di mana setiap migration memiliki fungsi <code>up()</code> untuk membuat tabel dan <code>down()</code> untuk menghapus tabel (rollback). Proses migrasi dan pengisian data awal dijalankan melalui custom Command Line Interface (CLI) tool <code>db.php</code>, sehingga pembuatan, penghapusan, maupun reset database dapat dilakukan secara otomatis menggunakan perintah seperti <code>php db.php migrate</code>, <code>php db.php rollback</code>, <code>php db.php seed</code>, dan <code>php db.php reset</code>. Pendekatan ini memberikan kemudahan dalam pengelolaan versi database, menjaga konsistensi struktur antar lingkungan pengembangan, serta mendukung arsitektur MVC yang digunakan pada aplikasi. Hasil implementasi menghasilkan 11 tabel utama, yaitu <code>users</code>, <code>categories</code>, <code>menus</code>, <code>cart_items</code>, <code>orders</code>, <code>order_items</code>, <code>payment_methods</code>, <code>payments</code>, <code>reviews</code>, <code>favorites</code>, dan <code>faqs</code>, yang saling berelasi untuk mendukung fitur autentikasi pengguna, katalog menu, keranjang belanja, checkout, pembayaran, unggah bukti transfer, riwayat pesanan, ulasan pelanggan, serta daftar menu favorit. Selain itu, file yang diunggah pengguna seperti bukti pembayaran tidak disimpan pada direktori publik, melainkan pada folder penyimpanan khusus (<code>storage/uploads</code>) sehingga hanya dapat diakses melalui mekanisme aplikasi yang telah dikendalikan oleh sistem untuk meningkatkan keamanan data.</p>
         </div>
 
         <div class="doc-section">
-            <h2>Struktur Isi</h2>
-            <ul>
-                <li>Diagram ERD dan penjelasan entitas</li>
-                <li>Relasi antar tabel</li>
-                <li>Field utama dan tipe data</li>
-                <li>Aturan integritas dan dependensi</li>
-            </ul>
+            <h2>Gambar Database MieME</h2>
+            <div class="gallery">
+                <img src="assets/Database MieMe/WhatsApp Image 2026-06-16 at 21.56.34.jpeg" alt="Database MieMe 21.56.34">
+                <img src="assets/Database MieMe/WhatsApp Image 2026-06-16 at 21.57.15.jpeg" alt="Database MieMe 21.57.15">
+                <img src="assets/Database MieMe/WhatsApp Image 2026-06-16 at 21.58.15.jpeg" alt="Database MieMe 21.58.15">
+                <img src="assets/Database MieMe/WhatsApp Image 2026-06-16 at 21.59.20.jpeg" alt="Database MieMe 21.59.20">
+                <img src="assets/Database MieMe/WhatsApp Image 2026-06-16 at 21.59.29.jpeg" alt="Database MieMe 21.59.29">
+                <img src="assets/Database MieMe/WhatsApp Image 2026-06-16 at 21.59.38.jpeg" alt="Database MieMe 21.59.38">
+                <img src="assets/Database MieMe/WhatsApp Image 2026-06-16 at 21.59.47.jpeg" alt="Database MieMe 21.59.47">
+                <img src="assets/Database MieMe/WhatsApp Image 2026-06-16 at 21.59.56.jpeg" alt="Database MieMe 21.59.56">
+                <img src="assets/Database MieMe/WhatsApp Image 2026-06-16 at 22.00.05.jpeg" alt="Database MieMe 22.00.05">
+                <img src="assets/Database MieMe/WhatsApp Image 2026-06-16 at 22.00.13.jpeg" alt="Database MieMe 22.00.13">
+                <img src="assets/Database MieMe/WhatsApp Image 2026-06-16 at 22.00.21.jpeg" alt="Database MieMe 22.00.21">
+                <img src="assets/Database MieMe/WhatsApp Image 2026-06-16 at 22.00.30.jpeg" alt="Database MieMe 22.00.30">
+                <img src="assets/Database MieMe/WhatsApp Image 2026-06-16 at 22.00.38.jpeg" alt="Database MieMe 22.00.38">
+                <img src="assets/Database MieMe/WhatsApp Image 2026-06-16 at 22.00.49.jpeg" alt="Database MieMe 22.00.49">
+            </div>
         </div>
 
         <div class="doc-section">

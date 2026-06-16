@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 13: Penerapan Sistem CRUD</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .doc-container { max-width:900px; margin:0 auto; padding:40px 20px; }
+        .doc-header { text-align:center; margin-bottom:30px; }
+        .doc-image { width:100%; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1); margin-bottom:20px; }
+        .doc-section { margin-bottom:30px; }
+        .feature { margin-bottom:28px; }
+        .feature-title { font-size:1.05rem; margin-bottom:8px; }
+        .feature img { width:100%; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+        .links-container { display:flex; flex-direction:column; gap:12px; margin-top:10px; }
+        .link-card { padding:12px; background:#f8f9fa; border-radius:8px; text-decoration:none; color:#333; border:1px solid #ddd; }
+    </style>
+</head>
+
+<body>
+    <div class="doc-container">
+        <a href="index.html" class="back-btn">&larr; Back to Portfolio</a>
+        <div class="doc-header">
+            <h1>Week 13: Penerapan Sistem CRUD pada Final Project</h1>
+        </div>
+
+        <div class="doc-section">
+            <h2>Deskripsi</h2>
+            <p>Dokumentasi fitur CRUD Final Project MieMe yang menampilkan kemampuan customer dan admin dalam mengelola data melalui antarmuka aplikasi.</p>
+        </div>
+
+        <div class="doc-section">
+            <h2>CRUD Customer</h2>
+            <div class="feature">
+                <div class="feature-title"><strong>Login</strong></div>
+                <p>Customer dapat mengakses akun mereka melalui halaman login untuk kemudian menggunakan fitur CRUD lain secara aman.</p>
+                <img src="assets/CRUD/customer/Login.png" alt="Customer Login">
+            </div>
+            <div class="feature">
+                <div class="feature-title"><strong>Edit Detail Profil</strong></div>
+                <p>Customer dapat mengubah detail profil mereka untuk memperbarui informasi pribadi dalam aplikasi.</p>
+                <img src="assets/CRUD/customer/EditDetailProfil.png" alt="Edit Detail Profil">
+            </div>
+            <div class="feature">
+                <div class="feature-title"><strong>Favorit</strong></div>
+                <p>Customer dapat menandai menu favorit untuk memudahkan akses dan pengelolaan daftar menu pilihan.</p>
+                <img src="assets/CRUD/customer/Favorit.png" alt="Favorit Customer">
+            </div>
+            <div class="feature">
+                <div class="feature-title"><strong>Menambahkan Keranjang</strong></div>
+                <p>Customer dapat menambahkan menu ke keranjang sebagai bagian dari proses pembuatan pesanan baru.</p>
+                <img src="assets/CRUD/customer/MenambahkanKeranjang.png" alt="Menambahkan Keranjang">
+            </div>
+            <div class="feature">
+                <div class="feature-title"><strong>Upload Bukti Pembayaran</strong></div>
+                <p>Customer dapat mengunggah bukti transfer dari media pada perangkatnya.</p>
+                <img src="assets/CRUD/customer/bayar.png" alt="Mengunggar Pembayaran">
+            </div>
+            <div class="feature">
+                <div class="feature-title"><strong>Export Invoice transaksi dan CSV Riwayat Transaksi</strong></div>
+                <p>Customer dapat mengekspor faktur pesanan ke format CSV sebagai bukti transaksi yang dapat disimpan.</p>
+                <img src="assets/CRUD/customer/ExportInvoceCSV.png" alt="Export Invoice CSV">
+            </div>
+        </div>
+
+        <div class="doc-section">
+            <h2>CRUD Admin</h2>
+            <div class="feature">
+                <div class="feature-title"><strong>Dashboard</strong></div>
+                <p>Admin dapat melihat ringkasan data dan status transaksi sebagai pusat kontrol aplikasi.</p>
+                <img src="assets/CRUD/admin/dashboard.png" alt="Dashboard Admin">
+            </div>
+            <div class="feature">
+                <div class="feature-title"><strong>Mengubah Status Pemesanan</strong></div>
+                <p>Admin dapat memperbarui status pesanan untuk melacak proses pemesanan hingga selesai.</p>
+                <img src="assets/CRUD/admin/MengubahStatusPemesanan.png" alt="Mengubah Status Pemesanan">
+            </div>
+            <div class="feature">
+                <div class="feature-title"><strong>Mengubah Status Pembayaran</strong></div>
+                <p>Admin dapat mengubah status pembayaran untuk mencatat bukti transaksi dan validasi pembayaran.</p>
+                <img src="assets/CRUD/admin/MengubahStatusPembayaran.png" alt="Mengubah Status Pembayaran">
+            </div>
+            <div class="feature">
+                <div class="feature-title"><strong>Mengedit Menu</strong></div>
+                <p>Admin dapat mengedit data menu untuk memperbarui informasi produk yang ditawarkan.</p>
+                <img src="assets/CRUD/admin/MengeditMenu.png" alt="Mengedit Menu">
+            </div>
+            <div class="feature">
+                <div class="feature-title"><strong>Mengedit Kategori Menu</strong></div>
+                <p>Admin dapat mengubah kategori menu untuk menjaga organisasi dan pengelompokan produk.</p>
+                <img src="assets/CRUD/admin/MengeditKategoriMenu.png" alt="Mengedit Kategori Menu">
+            </div>
+            <div class="feature">
+                <div class="feature-title"><strong>Melihat Detail Pengguna</strong></div>
+                <p>Admin dapat melihat detail pengguna untuk memantau dan mengelola akun yang terdaftar.</p>
+                <img src="assets/CRUD/admin/MelihatDetailPengguna.png" alt="Melihat Detail Pengguna">
+            </div>
+            <div class="feature">
+                <div class="feature-title"><strong>Mengubah Role Pengguna</strong></div>
+                <p>Admin dapat mengubah peran pengguna untuk mengatur hak akses dalam sistem.</p>
+                <img src="assets/CRUD/admin/MengubahRolePengguna.png" alt="Mengubah Role Pengguna">
+            </div>
+            <div class="feature">
+                <div class="feature-title"><strong>Menghapus Ulasan Customer</strong></div>
+                <p>Admin dapat menghapus ulasan customer yang tidak sesuai untuk menjaga kualitas konten platform.</p>
+                <img src="assets/CRUD/admin/MenghapusUlasanCustomer.png" alt="Menghapus Ulasan Customer">
+            </div>
+            <div class="feature">
+                <div class="feature-title"><strong>Export CSV Laporan Transaksi</strong></div>
+                <p>Admin dapat mengekspor laporan transaksi ke format CSV untuk keperluan analisis dan pelaporan.</p>
+                <img src="assets/CRUD/admin/ExportCSVLaporantransaksi.png" alt="Export CSV Laporan Transaksi">
+            </div>
+        </div>
+
+        <div class="doc-section">
+            <h2>Tautan Terkait</h2>
+            <div class="links-container">
+                <a href="https://mieme.freedev.app/" class="link-card" target="_blank"><strong>Demo:</strong> https://mieme.freedev.app/</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

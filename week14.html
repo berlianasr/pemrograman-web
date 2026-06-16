@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 14: Pembuatan Sistem Login Multi User</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .doc-container { max-width:900px; margin:0 auto; padding:40px 20px; }
+        .doc-header { text-align:center; margin-bottom:30px; }
+        .doc-image { width:100%; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1); margin-bottom:20px; }
+        .doc-section { margin-bottom:30px; }
+        .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; }
+        .gallery img { width:100%; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+        .links-container { display:flex; flex-direction:column; gap:12px; margin-top:10px; }
+        .link-card { padding:12px; background:#f8f9fa; border-radius:8px; text-decoration:none; color:#333; border:1px solid #ddd; }
+        code { background:#f1f1f1; padding:2px 6px; border-radius:4px; }
+    </style>
+</head>
+
+<body>
+    <div class="doc-container">
+        <a href="index.html" class="back-btn">&larr; Back to Portfolio</a>
+        <div class="doc-header">
+            <h1>Week 14: Pembuatan Sistem Login Multi User</h1>
+        </div>
+
+        <div class="doc-section">
+            <h2>Deskripsi</h2>
+            <p>Implementasi sistem autentikasi multi-user yang membedakan alur akses antara customer dan admin pada aplikasi MieME.</p>
+        </div>
+
+        <div class="doc-section">
+            <h2>Alur Pengguna</h2>
+            <p><strong>Customer:</strong> Registrasi terlebih dahulu, kemudian login, dan setelah berhasil akan diarahkan ke homepage aplikasi.</p>
+            <p><strong>Admin:</strong> Login dengan akun admin akan mengarahkan pengguna ke dashboard admin untuk manajemen aplikasi.</p>
+        </div>
+
+        <div class="doc-section">
+            <h2>Petunjuk Testing</h2>
+            <ul>
+                <li><strong>Customer:</strong> Gunakan email bebas/pribadi untuk registrasi dan login.</li>
+                <li><strong>Admin:</strong> Email: <code>admin@mieme.test</code> — Password: <code>admin123</code></li>
+            </ul>
+        </div>
+
+        <div class="doc-section">
+            <h2>Visualisasi</h2>
+            <div class="gallery">
+                <div>
+                    <img src="assets/loginmultiuser/registercustomer.png" alt="Register Customer">
+                    <p style="font-size:0.95rem; margin-top:6px; text-align:center;">Form registrasi customer</p>
+                </div>
+                <div>
+                    <img src="assets/loginmultiuser/logincustomer.png" alt="Login Customer">
+                    <p style="font-size:0.95rem; margin-top:6px; text-align:center;">Halaman login customer</p>
+                </div>
+                <div>
+                    <img src="assets/loginmultiuser/homepage.png" alt="Homepage Customer">
+                    <p style="font-size:0.95rem; margin-top:6px; text-align:center;">Homepage setelah login</p>
+                </div>
+                <div>
+                    <img src="assets/loginmultiuser/loginadmin.png" alt="Login Admin">
+                    <p style="font-size:0.95rem; margin-top:6px; text-align:center;">Halaman login admin</p>
+                </div>
+                <div>
+                    <img src="assets/loginmultiuser/dashboard.png" alt="Dashboard Admin">
+                    <p style="font-size:0.95rem; margin-top:6px; text-align:center;">Dashboard admin setelah login</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="doc-section">
+            <h2>Tautan Terkait</h2>
+            <div class="links-container">
+                <a href="https://mieme.freedev.app/" class="link-card" target="_blank"><strong>Demo:</strong> https://mieme.freedev.app/</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
