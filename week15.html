@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 15: Fitur Reporting</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .doc-container { max-width:900px; margin:0 auto; padding:40px 20px; }
+        .doc-header { text-align:center; margin-bottom:30px; }
+        .doc-image { width:100%; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1); margin-bottom:20px; }
+        .doc-section { margin-bottom:30px; }
+        .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; }
+        .gallery img { width:100%; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+        .link-card { padding:12px; background:#f8f9fa; border-radius:8px; text-decoration:none; color:#333; border:1px solid #ddd; display:block; }
+        code { background:#f1f1f1; padding:2px 6px; border-radius:4px; }
+    </style>
+</head>
+
+<body>
+    <div class="doc-container">
+        <a href="index.html" class="back-btn">&larr; Back to Portfolio</a>
+        <div class="doc-header">
+            <h1>Week 15: Fitur Reporting</h1>
+        </div>
+
+        <div class="doc-section">
+            <h2>Deskripsi</h2>
+            <p>Fitur Reporting pada dashboard admin MieME memungkinkan admin melihat statistik penjualan dan mengekspor laporan transaksi dalam format CSV sesuai rentang tanggal yang dipilih.</p>
+        </div>
+
+        <div class="doc-section">
+            <h2>Fitur Utama</h2>
+            <ul>
+                <li>Admin dapat memilih <strong>tanggal mulai</strong> dan <strong>tanggal selesai</strong> untuk rentang laporan.</li>
+                <li>Export report disajikan dalam format <strong>CSV</strong> yang dapat dibuka dengan Excel atau Google Sheets.</li>
+                <li>Laporan CSV mencakup data transaksi seperti nomor pesanan, nama customer, alamat pengiriman, total pembayaran, status pesanan, dan tanggal transaksi.</li>
+            </ul>
+        </div>
+
+        <div class="doc-section">
+            <h2>Penggunaan</h2>
+            <p>Pada halaman Reports admin, pilih rentang tanggal yang diinginkan lalu klik tombol <strong>Unduh Laporan CSV</strong>. Sistem akan mengunduh file report sekaligus menampilkan ringkasan data penjualan.</p>
+            <p>Gunakan akun admin: <code>admin@mieme.test</code> / <code>admin123</code>.</p>
+        </div>
+
+        <div class="doc-section">
+            <h2>Visualisasi</h2>
+            <div class="gallery">
+                <div>
+                    <img src="assets/reporting/reportdashboard.png" alt="Dashboard Reporting Admin" />
+                    <p style="font-size:0.95rem; margin-top:6px; text-align:center;">Dashboard reporting admin dengan filter rentang tanggal.</p>
+                </div>
+                <div>
+                    <img src="assets/reporting/hasilreport.png" alt="Output CSV Report" />
+                    <p style="font-size:0.95rem; margin-top:6px; text-align:center;">Contoh output file CSV laporan penjualan.</p>
+                </div>
+            </div>
+        </div>
+        <div class="doc-section">
+                    <h2>Tautan Terkait</h2>
+                    <div class="links-container">
+                <a href="https://mieme.freedev.app/public/admin/reports" class="link-card" target="_blank"><strong>Demo:</strong> https://mieme.freedev.app/public/admin/reports</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
