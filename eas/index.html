@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAS: Website MieMe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .doc-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: var(--text-light, #333);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .doc-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .doc-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color, #000);
+            margin-bottom: 20px;
+        }
+
+        .doc-image {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .doc-section {
+            margin-bottom: 40px;
+        }
+
+        .doc-section h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: var(--primary-color, #000);
+        }
+
+        .doc-section h3 {
+            font-size: 1.1rem;
+            margin-top: 12px;
+            margin-bottom: 6px;
+            color: var(--primary-color, #222);
+        }
+
+        .doc-section p,
+        .doc-section ul {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .doc-section ul {
+            padding-left: 20px;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: background 0.3s;
+            border: 1px solid #ddd;
+        }
+
+        .link-card:hover {
+            background: #e9ecef;
+        }
+
+        .link-card strong {
+            margin-right: 10px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .back-btn:hover {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="doc-container">
+        <a href="../index.html" class="back-btn">&larr; Back to Portfolio</a>
+
+        <div class="doc-header">
+            <h1>EAS: Website MieMe</h1>
+        </div>
+
+        <img src="../assets/ets/thumbnail.png" alt="MieMe Thumbnail" class="doc-image">
+
+        <div class="doc-section">
+            <h2>Deskripsi Website</h2>
+            <p>MieME adalah sebuah website pemesanan makanan (food-ordering) yang berfokus pada penjualan produk
+                hidangan mie premium beserta minuman pendampingnya. Website ini mengusung desain yang modern dan
+                dinamis serta menghadirkan alur pemesanan, pembayaran, dan manajemen pesanan yang intuitif.</p>
+        </div>
+
+        <div class="doc-section">
+            <h2>Fitur Utama Aplikasi</h2>
+
+            <h3>SISI CUSTOMER</h3>
+            <h3>1. Landing Page</h3><p>Halaman utama yang menampilkan banner, promo, dan akses cepat ke katalog menu.</p>
+            <h3>2. About Us</h3><p>Informasi tentang visi, misi, dan kisah MieME.</p>
+            <h3>3. Award</h3><p>Menampilkan penghargaan dan pencapaian untuk membangun kepercayaan pelanggan.</p>
+            <h3>4. Halaman Autentikasi</h3><p>Fitur login, registrasi, dan pemulihan kata sandi untuk pelanggan.</p>
+            <h3>5. Katalog Menu</h3><p>Daftar makanan dan minuman lengkap dengan gambar, deskripsi, dan harga.</p>
+            <h3>6. Detail Menu</h3><p>Halaman detail setiap menu dengan opsi kustomisasi dan informasi nutrisi.</p>
+            <h3>7. Keranjang Belanja</h3><p>Menampung item pesanan dengan update jumlah, subtotal, dan penyimpanan sementara.</p>
+            <h3>8. Checkout</h3><p>Form pengiriman dan ringkasan pesanan sebelum pembayaran.</p>
+            <h3>9. Pembayaran</h3><p>Opsi pembayaran seperti bank transfer, e-wallet, VA, dan QRIS.</p>
+            <h3>10. Upload Bukti Pembayaran</h3><p>Fitur untuk mengunggah bukti transfer ketika memilih metode manual.</p>
+            <h3>11. Order Berhasil</h3><p>Halaman konfirmasi pesanan yang berisi nomor pesanan dan estimasi waktu.</p>
+            <h3>12. Riwayat Pesanan</h3><p>Daftar pesanan sebelumnya beserta status dan detail pesanan.</p>
+            <h3>13. Detail Pesanan</h3><p>Tampilan lengkap isi pesanan, metode pembayaran, alamat, dan status pemrosesan.</p>
+            <h3>14. Profil Pengguna</h3><p>Pengaturan akun, alamat pengiriman, dan preferensi pengguna.</p>
+            <h3>15. Review dan Rating</h3><p>Pengguna dapat meninggalkan ulasan dan penilaian untuk setiap menu.</p>
+            <h3>16. Favorit</h3><p>Fitur menandai menu favorit untuk akses cepat di kemudian hari.</p>
+            <h3>SISI ADMIN</h3>
+            <h3>17. Dashboard Admin</h3><p>Ringkasan metrik, pesanan terbaru, dan notifikasi penting.</p>
+            <h3>18. Manajemen Pemesanan & Pembayaran</h3><p>Kelola status pesanan, verifikasi pembayaran, dan proses pengiriman.</p>
+            <h3>19. Manajemen Katalog Menu</h3><p>Tambah, edit, atau hapus menu, termasuk manajemen kategori dan stok.</p>
+            <h3>20. Manajemen Pengguna (Users)</h3><p>Kelola akun pelanggan dan hak akses.</p>
+            <h3>21. Moderasi Ulasan</h3><p>Review dan hapus ulasan yang tidak sesuai kebijakan.</p>
+            <h3>22. Laporan & Analitik</h3><p>Generate laporan penjualan, performa menu, dan metrik lain untuk analisis.</p>
+
+        </div>
+
+        <div class="doc-section">
+            <h2>Infografis Website</h2>
+            <img src="../assets/InfografisEAS.png" alt="Infografis Website" class="doc-image">
+        </div>
+
+        <div class="doc-section">
+            <h2>Desain Wireframe</h2>
+            <img src="../assets/ets/wireframe.png" alt="Desain Wireframe" class="doc-image">
+        </div>
+
+        <div class="doc-section">
+            <h2>Tautan Terkait</h2>
+            <div class="links-container">
+                <a href="https://canva.link/ghfldb6m7u39bos" target="_blank" class="link-card">
+                    <strong>PPT Presentasi:</strong> Slide Presentasi Proyek
+                </a>
+                <a href="https://docs.google.com/document/d/1HxLdUYpGTjjHPraZZbDXjCdY5FTw5Z4xtuAz2v5bUbg/edit?usp=sharing" target="_blank" class="link-card">
+                    <strong>Dokumen Laporan Akhir:</strong> Laporan Proyek
+                </a>
+                <a href="https://github.com/fatihkuliah/EAS-Pweb" target="_blank" class="link-card">
+                    <strong>Link Code:</strong> Repositori GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
