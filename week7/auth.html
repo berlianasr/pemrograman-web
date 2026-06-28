@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7: Login & Register Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/style.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-maroon: #800000;
+            --light-maroon: #A52A2A;
+            --cream-bg: #FDFBF7;
+            --cream-dark: #F5EFEB;
+            --charcoal: #1E1E1E;
+            --muted-gray: #6C757D;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, var(--cream-bg) 0%, var(--cream-dark) 50%, #E6DFD9 100%);
+            color: var(--charcoal);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        h1, h2, h3, h4, h5, h6, .playfair {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* Card Customization */
+        .auth-container {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .auth-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(128, 0, 0, 0.08);
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        /* Custom Tabs */
+        .nav-pills-custom {
+            background-color: rgba(0, 0, 0, 0.04);
+            padding: 0.35rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+        }
+
+        .nav-pills-custom .nav-link {
+            border-radius: 50px;
+            color: var(--charcoal);
+            font-weight: 600;
+            padding: 0.6rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-pills-custom .nav-link.active {
+            background-color: var(--primary-maroon);
+            color: #ffffff;
+            box-shadow: 0 4px 10px rgba(128, 0, 0, 0.2);
+        }
+
+        /* Input Fields */
+        .form-floating > .form-control:focus {
+            border-color: var(--primary-maroon);
+            box-shadow: 0 0 0 0.25rem rgba(128, 0, 0, 0.15);
+        }
+
+        .form-floating > .form-control {
+            border-radius: 12px;
+            border: 1.5px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .form-check-input:checked {
+            background-color: var(--primary-maroon);
+            border-color: var(--primary-maroon);
+        }
+
+        /* Password Strength Meter */
+        .strength-meter {
+            height: 5px;
+            background-color: rgba(0,0,0,0.06);
+            border-radius: 3px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .strength-bar {
+            height: 100%;
+            width: 0;
+            transition: all 0.4s ease;
+        }
+
+        /* Buttons styling */
+        .btn-maroon {
+            background-color: var(--primary-maroon);
+            color: #ffffff;
+            border: 2px solid var(--primary-maroon);
+            border-radius: 12px;
+            font-weight: 600;
+            padding: 0.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-maroon:hover {
+            background-color: transparent;
+            color: var(--primary-maroon);
+            border-color: var(--primary-maroon);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(128, 0, 0, 0.15);
+        }
+
+        .btn-social {
+            border-radius: 12px;
+            border: 1.5px solid rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            font-weight: 500;
+            padding: 0.6rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-social:hover {
+            background: rgba(0,0,0,0.02);
+            border-color: var(--primary-maroon);
+        }
+
+        /* Password Show Toggle */
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 10;
+            color: var(--muted-gray);
+            font-size: 1.15rem;
+            transition: color 0.2s;
+        }
+
+        .password-toggle:hover {
+            color: var(--primary-maroon);
+        }
+
+        .back-link {
+            color: var(--primary-maroon);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--light-maroon);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-container">
+        
+        <!-- Back Arrow -->
+        <div class="mb-4">
+            <a href="index.html" class="back-link"><i class="bi bi-arrow-left me-2"></i>Back to Overview</a>
+        </div>
+
+        <div class="auth-card">
+            
+            <!-- Brand Logo / Title -->
+            <div class="text-center mb-4">
+                <h2 class="display-6 text-dark mb-1 playfair"><i class="bi bi-compass-fill text-danger me-2"></i>TechWeave</h2>
+                <p class="text-secondary" style="font-size: 0.9rem;">Empowering your developmental workflows.</p>
+            </div>
+
+            <!-- Tab Pills -->
+            <ul class="nav nav-pills nav-fill nav-pills-custom" id="authTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-pane" type="button" role="tab" aria-controls="login-pane" aria-selected="true">Sign In</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register-pane" type="button" role="tab" aria-controls="register-pane" aria-selected="false">Register</button>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="authTabsContent">
+                
+                <!-- Login Pane -->
+                <div class="tab-pane fade show active" id="login-pane" role="tabpanel" aria-labelledby="login-tab" tabindex="0">
+                    <form id="loginForm" class="needs-validation" novalidate>
+                        
+                        <!-- Email Input -->
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com" required>
+                            <label for="loginEmail">Email Address</label>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="form-floating mb-3 position-relative">
+                            <input type="password" class="form-control pe-5" id="loginPassword" placeholder="Password" required>
+                            <label for="loginPassword">Password</label>
+                            <span class="password-toggle" onclick="togglePasswordVisibility('loginPassword', this)"><i class="bi bi-eye-slash"></i></span>
+                            <div class="invalid-feedback">Please enter your password.</div>
+                        </div>
+
+                        <!-- Remember & Forgot -->
+                        <div class="d-flex align-items-center justify-content-between mb-4" style="font-size: 0.85rem;">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                                <label class="form-check-label text-secondary" for="rememberMe">
+                                    Remember me
+                                </label>
+                            </div>
+                            <a href="#" class="text-decoration-none" style="color: var(--primary-maroon); font-weight: 500;">Forgot password?</a>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-maroon w-100 mb-4" id="btnLoginSubmit">
+                            <span class="spinner-border spinner-border-sm me-2 d-none" role="status" aria-hidden="true"></span>
+                            Sign In
+                        </button>
+
+                        <!-- Social Login Divider -->
+                        <div class="d-flex align-items-center mb-4">
+                            <hr class="flex-grow-1 text-muted opacity-25">
+                            <span class="px-3 text-muted" style="font-size: 0.8rem;">Or continue with</span>
+                            <hr class="flex-grow-1 text-muted opacity-25">
+                        </div>
+
+                        <!-- Social Login Buttons -->
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-social w-100"><i class="bi bi-google text-danger"></i>Google</button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-social w-100"><i class="bi bi-github"></i>GitHub</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Register Pane -->
+                <div class="tab-pane fade" id="register-pane" role="tabpanel" aria-labelledby="register-tab" tabindex="0">
+                    <form id="registerForm" class="needs-validation" novalidate>
+                        
+                        <!-- Full Name Input -->
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="registerName" placeholder="John Doe" required minlength="3">
+                            <label for="registerName">Full Name</label>
+                            <div class="invalid-feedback">Name must be at least 3 characters.</div>
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="registerEmail" placeholder="name@example.com" required>
+                            <label for="registerEmail">Email Address</label>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="form-floating mb-2 position-relative">
+                            <input type="password" class="form-control pe-5" id="registerPassword" placeholder="Password" required minlength="6" oninput="checkPasswordStrength(this.value)">
+                            <label for="registerPassword">Password</label>
+                            <span class="password-toggle" onclick="togglePasswordVisibility('registerPassword', this)"><i class="bi bi-eye-slash"></i></span>
+                            <div class="invalid-feedback">Password must be at least 6 characters.</div>
+                        </div>
+
+                        <!-- Strength Meter Widget -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-secondary" style="font-size: 0.75rem;">Password Strength:</span>
+                                <span id="strengthText" class="fw-semibold text-danger" style="font-size: 0.75rem;">Too short</span>
+                            </div>
+                            <div class="strength-meter">
+                                <div id="strengthBar" class="strength-bar bg-danger"></div>
+                            </div>
+                        </div>
+
+                        <!-- Terms Checkbox -->
+                        <div class="form-check mb-4" style="font-size: 0.85rem;">
+                            <input class="form-check-input" type="checkbox" value="" id="acceptTerms" required>
+                            <label class="form-check-label text-secondary" for="acceptTerms">
+                                I agree to the <a href="#" class="text-decoration-none" style="color: var(--primary-maroon);">Terms of Service</a> & <a href="#" class="text-decoration-none" style="color: var(--primary-maroon);">Privacy Policy</a>
+                            </label>
+                            <div class="invalid-feedback">You must accept the terms to register.</div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-maroon w-100 mb-4" id="btnRegisterSubmit">
+                            <span class="spinner-border spinner-border-sm me-2 d-none" role="status" aria-hidden="true"></span>
+                            Create Account
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        // Toggle password view
+        function togglePasswordVisibility(fieldId, iconElem) {
+            const input = document.getElementById(fieldId);
+            const icon = iconElem.querySelector('i');
+            if (input.type === "password") {
+                input.type = "text";
+                icon.className = "bi bi-eye";
+            } else {
+                input.type = "password";
+                icon.className = "bi bi-eye-slash";
+            }
+        }
+
+        // Check Password Strength
+        function checkPasswordStrength(val) {
+            const strengthBar = document.getElementById('strengthBar');
+            const strengthText = document.getElementById('strengthText');
+            
+            if (val.length === 0) {
+                strengthBar.style.width = '0%';
+                strengthText.textContent = '';
+                return;
+            }
+
+            if (val.length < 6) {
+                strengthBar.style.width = '20%';
+                strengthBar.className = 'strength-bar bg-danger';
+                strengthText.textContent = 'Too short';
+                strengthText.className = 'fw-semibold text-danger';
+                return;
+            }
+
+            let score = 0;
+            // Length check
+            if (val.length >= 8) score++;
+            if (val.length >= 12) score++;
+            // Letters & Numbers check
+            if (/[A-Z]/.test(val) && /[a-z]/.test(val)) score++;
+            if (/[0-9]/.test(val)) score++;
+            if (/[^A-Za-z0-9]/.test(val)) score++;
+
+            if (score <= 1) {
+                strengthBar.style.width = '40%';
+                strengthBar.className = 'strength-bar bg-warning';
+                strengthText.textContent = 'Weak';
+                strengthText.className = 'fw-semibold text-warning';
+            } else if (score <= 3) {
+                strengthBar.style.width = '70%';
+                strengthBar.className = 'strength-bar bg-info';
+                strengthText.textContent = 'Medium';
+                strengthText.className = 'fw-semibold text-info';
+            } else {
+                strengthBar.style.width = '100%';
+                strengthBar.className = 'strength-bar bg-success';
+                strengthText.textContent = 'Strong';
+                strengthText.className = 'fw-semibold text-success';
+            }
+        }
+
+        // Forms Validation and Submitting state
+        (() => {
+            'use strict';
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+
+            loginForm.addEventListener('submit', event => {
+                if (!loginForm.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    event.preventDefault();
+                    const submitBtn = document.getElementById('btnLoginSubmit');
+                    const spinner = submitBtn.querySelector('.spinner-border');
+                    
+                    spinner.classList.remove('d-none');
+                    submitBtn.setAttribute('disabled', 'true');
+                    
+                    setTimeout(() => {
+                        alert('Login successful! Redirecting...');
+                        window.location.href = 'content.html';
+                    }, 1500);
+                }
+                loginForm.classList.add('was-validated');
+            }, false);
+
+            registerForm.addEventListener('submit', event => {
+                if (!registerForm.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    event.preventDefault();
+                    const submitBtn = document.getElementById('btnRegisterSubmit');
+                    const spinner = submitBtn.querySelector('.spinner-border');
+                    
+                    spinner.classList.remove('d-none');
+                    submitBtn.setAttribute('disabled', 'true');
+                    
+                    setTimeout(() => {
+                        alert('Registration successful! Redirecting to login tab...');
+                        spinner.classList.add('d-none');
+                        submitBtn.removeAttribute('disabled');
+                        registerForm.reset();
+                        registerForm.classList.remove('was-validated');
+                        document.getElementById('strengthBar').style.width = '0%';
+                        document.getElementById('strengthText').textContent = '';
+                        
+                        // Switch tab to login
+                        const loginTab = new bootstrap.Tab(document.getElementById('login-tab'));
+                        loginTab.show();
+                    }, 1500);
+                }
+                registerForm.classList.add('was-validated');
+            }, false);
+        })();
+    </script>
+</body>
+</html>

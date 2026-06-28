@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 7: Latihan Bootstrap - Documentation</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .doc-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .doc-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .doc-image {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .doc-section {
+            margin-bottom: 30px;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .link-card {
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ddd;
+            transition: all 0.2s ease;
+        }
+
+        .link-card:hover {
+            background: #eaeaea;
+            border-color: #bbb;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="doc-container">
+        <a href="../index.html" class="back-btn">&larr; Back to Portfolio</a>
+        <div class="doc-header">
+            <h1>Week 7: Latihan Bootstrap</h1>
+        </div>
+        <img src="../assets/bootstrap_latihan1.png" alt="Latihan Bootstrap Preview 1" class="doc-image">
+        <img src="../assets/bootstrap_latihan2.png" alt="Latihan Bootstrap Preview 2" class="doc-image">
+
+        <div class="doc-section">
+            <h2>Deskripsi</h2>
+            <p>Implementasi framework Bootstrap 5.3.3 untuk merancang halaman web yang responsif, modern, dan
+                interaktif. Latihan ini berfokus pada pemanfaatan sistem grid, utilitas flexbox, dan komponen bawaan
+                Bootstrap.</p>
+        </div>
+
+        <div class="doc-section">
+            <h2>Fitur & Komponen</h2>
+            <ul>
+                <li><strong>Halaman Konten Responsif:</strong> Memanfaatkan Navbar, Carousel, Cards Grid, List Group,
+                    dan utilities Bootstrap untuk menyusun layout artikel berita/portal informasi yang ramah perangkat
+                    seluler.</li>
+                <li><strong>Halaman Login & Register:</strong> Formulir interaktif dengan fitur tab-switching untuk
+                    berpindah halaman masuk/daftar secara dinamis, dilengkapi validasi forms bawaan Bootstrap
+                    (`was-validated`), floating labels, dan show/hide password.</li>
+                <li><strong>Kustomisasi Tema:</strong> Penyelarasan warna visual agar tetap harmonis dengan identitas
+                    portfolio yang dominan maroon dan cream.</li>
+            </ul>
+        </div>
+
+        <div class="doc-section">
+            <h2>Tautan Terkait</h2>
+            <div class="links-container">
+                <a href="content.html" class="link-card" target="_blank"><strong>Demo Tugas 1:</strong> Halaman Konten
+                    Responsif</a>
+                <a href="auth.html" class="link-card" target="_blank"><strong>Demo Tugas 2:</strong> Halaman Login &
+                    Register</a>
+                <a href="https://github.com/berlianasr/pemrograman-web/tree/main/week7" class="link-card"
+                    target="_blank"><strong>Source Code:</strong> GitHub Folder</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
